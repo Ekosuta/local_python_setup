@@ -1,14 +1,20 @@
 def hello():
     print("hello there")
 
-def pack(first, last, age):
-    return [first, last, age]
-profile = pack('elvin', 'kosuta', 19)
+def pack(a, b, c):
+    return [a, b, c]
 
-lunch = ['eggs', 'salad', 'pasta']
-def eat_lunch(lunch):
-    print(f"First I eat {lunch[0]}. Next I eat {lunch[1]}. Lastly I eat {lunch[2]}")
+def eat_lunch(my_lunch):
+    if len(my_lunch) == 0:
+        print("My lunchbox is empty!")
+    else:
+        for i in range(len(my_lunch)):
+            if i == 0:
+                print(f"First I eat {my_lunch[0]}")
+            else:
+                print(f"Next I eat {my_lunch[i]}")
 
 hello()
-print(profile)
-eat_lunch(lunch)
+print(pack('one', 'two', 'three'))
+eat_lunch([])
+eat_lunch(['eggs', 'salad'])
